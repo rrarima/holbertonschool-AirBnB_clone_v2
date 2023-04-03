@@ -20,9 +20,9 @@ def c_cool(text):
     return "C {}".format(text.replace("_", " "))
 
 
-@app.route("/<path:subpath>", strict_slashes=False)
-@app.route("/<path:subpath>/<text>", strict_slashes=False)
-def python_route(subpath,text="is cool"):
+@app.route("/python", strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
+def python_route(subpath, text="is cool"):
     return "Python {}".format(text.replace("_", " "))
 
 
