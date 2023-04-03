@@ -15,14 +15,9 @@ def hbnb_route():
     return "HBNB"
 
 
-@app.route("/c/is_fun", strict_slashes=False)
-def c_is_fun():
-    return "C is fun"
-
-
-@app.route("/c/cool", strict_slashes=False)
-def c_cool():
-    return "C cool"
+@app.route("/c/<text>", strict_slashes=False)
+def c_cool(text):
+    return "C {}".format(text.replace("_", " "))
 
 
 if __name__ == "__main__":
