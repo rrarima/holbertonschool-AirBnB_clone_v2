@@ -73,8 +73,7 @@ class DBStorage:
         Base.metadata.create_all(bind=self.__engine)
         self.__session = scoped_session(sessionmaker(bind=self.__engine,
                                                      expire_on_commit=False))
-        self.__session = Session()
 
-        def close(self):
+    def close(self):
         """Close SQLAlchemy session"""
         self.__session.close()
