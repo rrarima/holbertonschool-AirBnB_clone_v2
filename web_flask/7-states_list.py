@@ -13,7 +13,7 @@ def states_list(n):
     return render_template("7-states_list.html", states=states)
 
 @app.teardown_appcontext
-def teardown():
+def teardown(exc):
     storage.close()
 
 if __name__ == "__main__":
